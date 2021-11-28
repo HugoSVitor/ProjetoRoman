@@ -9,7 +9,7 @@ namespace Senai_Roman.webAPI.Interfaces
 {
     interface ISugestaoRepository
     {
-        public void CadastrarSugestao(Sugestao novaSugestao);
+        public void CadastrarSugestao(Sugestao novaSugestao, int IdUsuarioSugestao);
 
         public List<Sugestao> ListarSugestoes();
     }
