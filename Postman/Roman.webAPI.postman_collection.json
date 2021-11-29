@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "3b0df54c-d759-417b-8f5d-026c241e2959",
+		"name": "Roman.webAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Logar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"senha\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://>>>>>SeuIpAqui<<<<<:5000/api/Logins",
+							"protocol": "http",
+							"host": [
+								">>>>>SeuIpAqui<<<<<"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Logins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sugestao",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzQGVtYWlsLmNvbSIsImp0aSI6IjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIyIiwicm9sZSI6IjIiLCJleHAiOjE2MzgwNzcyMTMsImlzcyI6IlNlbmFpX1JvbWFuLndlYkFQSSIsImF1ZCI6IlNlbmFpX1JvbWFuLndlYkFQSSJ9.Gh8nzx1t2y9mGRNsWhROJzYiTYTDI4_jTEmtNaEBebM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://>>>>>SeuIpAqui<<<<<:5000/api/Sugestaos",
+							"protocol": "http",
+							"host": [
+								">>>>>SeuIpAqui<<<<<"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Sugestaos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzQGVtYWlsLmNvbSIsImp0aSI6IjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIyIiwicm9sZSI6IjIiLCJleHAiOjE2MzgwNzcyMTMsImlzcyI6IlNlbmFpX1JvbWFuLndlYkFQSSIsImF1ZCI6IlNlbmFpX1JvbWFuLndlYkFQSSJ9.Gh8nzx1t2y9mGRNsWhROJzYiTYTDI4_jTEmtNaEBebM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTema\": 0,\r\n    \"tituloSugestao\": \"\",\r\n    \"descricao\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://>>>>>SeuIpAqui<<<<<:5000/api/Sugestaos",
+							"protocol": "http",
+							"host": [
+								">>>>>SeuIpAqui<<<<<"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Sugestaos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tema",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzQGVtYWlsLmNvbSIsImp0aSI6IjMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIyIiwicm9sZSI6IjIiLCJleHAiOjE2MzgwNzcyMTMsImlzcyI6IlNlbmFpX1JvbWFuLndlYkFQSSIsImF1ZCI6IlNlbmFpX1JvbWFuLndlYkFQSSJ9.Gh8nzx1t2y9mGRNsWhROJzYiTYTDI4_jTEmtNaEBebM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://>>>>>SeuIpAqui<<<<<:5000/api/Temas",
+							"protocol": "http",
+							"host": [
+								">>>>>SeuIpAqui<<<<<"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Temas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
