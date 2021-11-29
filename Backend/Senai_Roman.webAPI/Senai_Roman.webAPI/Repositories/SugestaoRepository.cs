@@ -13,8 +13,9 @@ namespace Senai_Roman.webAPI.Repositories
     class SugestaoRepository : ISugestaoRepository
     {
         RomanContext ctx = new();
-        public void CadastrarSugestao(Sugestao novaSugestao)
+        public void CadastrarSugestao(Sugestao novaSugestao, int IdUsuarioSugestao)
         {
+            novaSugestao.IdUsuario = Convert.ToInt16(IdUsuarioSugestao);
             ctx.Sugestaos.Add(novaSugestao);
             ctx.SaveChanges();
         }
