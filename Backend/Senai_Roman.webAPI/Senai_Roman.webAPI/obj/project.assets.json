@@ -7543,24 +7543,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pedro\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Werther\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro\\Desktop\\Senai\\2oSemestre\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
+      "projectUniqueName": "D:\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
       "projectName": "Senai_Roman.webAPI",
-      "projectPath": "C:\\Users\\Pedro\\Desktop\\Senai\\2oSemestre\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
-      "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro\\Desktop\\Senai\\2oSemestre\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\obj\\",
+      "projectPath": "D:\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
+      "packagesPath": "C:\\Users\\Werther\\.nuget\\packages\\",
+      "outputPath": "D:\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Werther\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
