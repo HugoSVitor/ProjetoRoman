@@ -14,6 +14,8 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import {
     Colors,
     DebugInstructions,
@@ -25,6 +27,15 @@ import {
 const bottomTab = createBottomTabNavigator();
 
 export default class Home extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    Logout = async () => {
+        await AsyncStorage.removeItem('userToken');
+        this.props.navigation.navigate('Login');
+    }
+
     render() {
         return (
             <View style={styles.Main}>
@@ -35,7 +46,7 @@ export default class Home extends Component {
                         de profissionais
                         parceiros
                     </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.Logout}>
                         <Image source={require('../../Assets/IconsNavigation/logout.png')} />
                     </TouchableOpacity>
                 </ImageBackground >

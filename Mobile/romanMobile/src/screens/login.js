@@ -29,7 +29,7 @@ export default class Login extends Component
     realizarLogin = async () => {
         console.warn(this.state.email + '' + this.state.senha)
 
-        const resposta = await api.post('/login',
+        const resposta = await api.post('/Logins',
             {
                 email: this.state.email,
                 senha: this.state.senha
@@ -40,7 +40,7 @@ export default class Login extends Component
         await AsyncStorage.setItem('userToken',token)
 
         if (resposta.status == 200) {
-            this.props.navigation('Main');
+            this.props.navigation.navigate('Main');
         }
         console.warn(token)
         
@@ -48,9 +48,9 @@ export default class Login extends Component
 
     render() {
         return (
-            <ImageBackground style={StyleSheet.absoluteFillObject} source={require('../../assets/img/FundoLogin.png')}> 
+            <ImageBackground style={StyleSheet.absoluteFillObject} source={require('../../Assets/img/FundoLogin.png')}> 
                 <View style={styles.main}>
-                    <Image source={require('../../assets/img/Logo.png')} />
+                    <Image source={require('../../Assets/img/Logo.png')} />
                     <Text style={styles.tituloPag}>Login</Text>
                     <TextInput 
                     style={styles.input}
