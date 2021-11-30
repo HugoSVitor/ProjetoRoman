@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import 'react-native-gesture-handler';
 
  import 'react-native-gesture-handler';
 
@@ -32,21 +26,29 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Main from '../romanMobile/src/screens/Main'
-
 const AuthStack = createStackNavigator();
 
-export default function Stack(){
-  return(  
-  <NavigationContainer>
-    <StatusBar backgroundColor="#EDB205" />
-    <AuthStack.Navigator initialRouteName="Main" screenOptions={{
-    headerShown: false,
-  }}>
+import Login from './src/screens/login';
+import Main from './src/screens/Main'
 
-      <AuthStack.Screen name="Main" component={Main}/>
 
-    </AuthStack.Navigator>
-  </NavigationContainer>
+export default function Stack() {
+  return(
+    <NavigationContainer>
+      <StatusBar
+        hidden={true}
+        backgroundColor="#EDB205"
+      />
+
+      <AuthStack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+        headerShown: false,
+      }}
+      >
+        <AuthStack.Screen name="Login" component={Login} />
+        <AuthStack.Screen name="Main" component={Main} />
+      </AuthStack.Navigator>
+    </NavigationContainer>
   )
 }
