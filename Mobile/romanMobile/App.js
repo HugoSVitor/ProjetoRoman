@@ -15,7 +15,7 @@ export default function Stack() {
     <NavigationContainer>
 
       <AuthStack.Navigator>
-        <AuthStack.Screen name="Cadastro" component={Cadastro} />
+        <AuthStack.Screen name="Cadastrar Escopo" component={Cadastro} />
       </AuthStack.Navigator>
     </NavigationContainer>
 
