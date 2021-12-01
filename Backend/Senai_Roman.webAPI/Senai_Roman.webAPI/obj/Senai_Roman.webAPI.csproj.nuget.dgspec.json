@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\43392993832\\Desktop\\PedroL\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj": {}
+    "C:\\Users\\53961345856\\Desktop\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\43392993832\\Desktop\\PedroL\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj": {
+    "C:\\Users\\53961345856\\Desktop\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\43392993832\\Desktop\\PedroL\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\53961345856\\Desktop\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
         "projectName": "Senai_Roman.webAPI",
-        "projectPath": "C:\\Users\\43392993832\\Desktop\\PedroL\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
-        "packagesPath": "C:\\Users\\43392993832\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\43392993832\\Desktop\\PedroL\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\obj\\",
+        "projectPath": "C:\\Users\\53961345856\\Desktop\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\Senai_Roman.webAPI.csproj",
+        "packagesPath": "C:\\Users\\53961345856\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\53961345856\\Desktop\\ProjetoRoman\\Backend\\Senai_Roman.webAPI\\Senai_Roman.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\43392993832\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\53961345856\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
