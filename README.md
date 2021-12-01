@@ -12,4 +12,10 @@ Foi criada uma API na IDE Visual Studio por meio da linguagem de programação C
 Por meio do software Figma foi criado um protótipo de alta fidelidade para uma aplicação mobile, seguindo os princípios de UI/UX, sendo centrada no usuário.
 
 ## Frontend
-Com a ajuda
+Com a ajuda das bibliotecas do React e React Native foi construída uma aplicação híbrida pelo software Visual Studio Code, mesmo que com foco no android. Testes foram feitos pelo Software Android Studio e biliotecas externas foram utilizadas, são elas:
+-React Native Navigation (+ Bottom tabs)
+-React Native Screens e Safe area context
+-React Native Gesture handler
+-React Native Async Storage
+-Jwt Decode
+-Axios
