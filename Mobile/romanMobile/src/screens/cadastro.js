@@ -7,7 +7,10 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
+    FlatList
 } from 'react-native';
+
+//import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class Cadastro extends Component {
 
@@ -20,21 +23,40 @@ export default class Cadastro extends Component {
         };
     }
 
+    buscarEventos = async () => {
+        const resposta = await api.get('/Temas');
+        // console.warn(resposta);
+        const dadosDaApi = resposta.data;
+        this.setState({ listaTemas: dadosDaApi });
+    };
+
+    componentDidMount() {
+        this.buscarEventos();
+    }
+
     render() {
         return (
             <View>
                 <View style={styles.box}>
                     <View style={styles.dados}>
                         <Text>Título</Text>
-                        <TextInput style={styles.inserir} onValueChange={this.setState(titulo)} />
+                        <TextInput style={styles.inserir} onValueChange={this.state.titulo} />
                     </View>
                     <View style={styles.dados}>
                         <Text>Descrição</Text>
-                        <TextInput style={styles.inserir} onValueChange={this.setState(descricao)} />
+                        <TextInput style={styles.inserir} onValueChange={this.state.descricao} />
                     </View>
                     <View style={styles.dados}>
                         <Text>Tema</Text>
-                        <Picker
+                        <FlatList
+                            contentContainerStyle={styles.mainBodyContent}
+                            data={this.state.listaTemas}
+                            keyExtractor={item => item.idTema}
+                            renderItem={this.renderItem}
+                        />
+
+
+                        {/* <Picker
 
                             style={{ height: 50, width: 150 }}
 
@@ -56,8 +78,7 @@ export default class Cadastro extends Component {
                                     return <Picker.Item value={escopo.tituloTema} label='Título' key={escopo.idTema} />
                                 })
                             }
-                        </Picker>
-
+                        </Picker> */}
 
                     </View>
                     <TouchableOpacity style={styles.btnCadastar}>
@@ -67,6 +88,16 @@ export default class Cadastro extends Component {
             </View>
         );
     }
+
+    renderItem = ({ item }) => (
+        // <Text style={{ fontSize: 20, color: 'red' }}>{item.nomeEvento}</Text>
+
+        <View style={styles.flatItemRow}>
+
+            <Text style={styles.flatItemTitle}>{item.tituloTema}</Text>
+
+        </View>
+    );
 
 }
 
@@ -104,6 +135,23 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    mainBodyContent: {
+        // paddingTop: 30,
+        // paddingRight: 50,
+        // paddingLeft: 50,
+    },
+    // dados do evento de cada item da lista (ou seja, cada linha da lista)
+    flatItemRow: {
+        // flexDirection: 'row',
+        // borderBottomWidth: 1,
+        // borderBottomColor: '#ccc',
+        // marginTop: 40,
+    },
+
+    flatItemTitle: {
+        fontSize: 16,
+        color: '#333',
+    },
 
 })
