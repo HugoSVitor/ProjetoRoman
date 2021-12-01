@@ -13,9 +13,9 @@ Por meio do software Figma foi criado um protótipo de alta fidelidade para uma 
 
 ### Frontend
 Com a ajuda das bibliotecas do React e React Native foi construída uma aplicação híbrida pelo software Visual Studio Code, mesmo que com foco no android. Testes foram feitos pelo Software Android Studio e biliotecas externas foram utilizadas, são elas:
--React Native Navigation (+ Bottom tabs)
--React Native Screens e Safe area context
--React Native Gesture handler
--React Native Async Storage
--Jwt Decode
--Axios
+- React Native Navigation (+ Bottom tabs)
+- React Native Screens e Safe area context
+- React Native Gesture handler
+- React Native Async Storage
+- Jwt Decode
+- Axios
