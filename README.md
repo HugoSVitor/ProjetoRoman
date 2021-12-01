@@ -6,7 +6,7 @@ Foi utilizado o Microsoft SqlServer para a criação de um Banco de Dados relaci
 escopos e temas de escopos.
 
 ### Backend
-Foi criada uma API na IDE Visual Studio por meio da linguagem de programação C#, configurando endpoints e classes para uma manipulação do BD por meio de rotas, com testes feitos pelo software Postman.
+Foi criada uma API na IDE Visual Studio por meio da linguagem de programação C#, configurando endpoints e classes para uma manipulação do BD por meio de rotas, com testes feitos pelo software Postman. Além disso, foi utilizado o EntityFramework para a comunicação com o BD, o Swagger para a criação de uma documentação da API e o JwtBearer para a manipulação de tokens.
 
 ### Layout
 Por meio do software Figma foi criado um protótipo de alta fidelidade para uma aplicação mobile, seguindo os princípios de UI/UX, sendo centrada no usuário.
