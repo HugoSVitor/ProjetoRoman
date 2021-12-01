@@ -2,7 +2,7 @@
 Projeto Roman, passado durante a sprint mobile do segundo semestre do curso DEV do Senai de informática. Feito em trio: Samuel Figueiredo, Pedro Lucas e Hugo Vitor.
 
 ### Banco de Dados
-Foi utilizado o Microsoft SqlServer para a criação de um Banco de Dados relacional que atendesse as necessidades do cliente, criando as entidades de usuários, tipos de usuários,
+Foi utilizado o Microsoft SSMS para a criação de um Banco de Dados relacional que atendesse as necessidades do cliente, criando as entidades de usuários, tipos de usuários,
 escopos e temas de escopos.
 
 ### Backend
