@@ -7,6 +7,7 @@ import api from '../services/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
 import {
     StyleSheet,
     View,
@@ -30,11 +31,11 @@ export default class Cadastro extends Component {
 
     buscarTemas = async () => {
         try {
-            // const Token = await AsyncStorage.getItem('userToken');
+            const Token = await AsyncStorage.getItem('userToken');
 
             const resposta = await api.get('/Temas', {
                 headers: {
-                    Authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhdWxvQGVtYWlsLmNvbSIsImp0aSI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIyIiwicm9sZSI6IjIiLCJleHAiOjE2MzgzODczNzYsImlzcyI6IlNlbmFpX1JvbWFuLndlYkFQSSIsImF1ZCI6IlNlbmFpX1JvbWFuLndlYkFQSSJ9.pGHq68HH5AWYZAZ3SP0h37alSKeFMccI4n21Q5-qqBo"
+                    Authorization: 'Bearer ' + Token
                 },
             });
             console.warn(resposta);
@@ -80,89 +81,48 @@ export default class Cadastro extends Component {
 
     render() {
         return (
-            <View>
-                <View style={styles.box}>
-                    <View style={styles.dados}>
-                        <Text>Título</Text>
-                        <TextInput style={styles.inserir} onChangeText={titulo => this.setState({ titulo })} />
+            
+                <View style={styles.container_geral}>
+                    <View>
+                        <Text style={styles.titulo_pg}>Cadastrar Escopo</Text>
                     </View>
-                    <View style={styles.dados}>
-                        <Text>Descrição</Text>
-                        <TextInput style={styles.inserir} onChangeText={descricao => this.setState({ descricao })} />
+
+                    <View style={styles.box}>
+                        <View style={styles.dados}>
+                            <Text>Título</Text>
+                            <TextInput style={styles.inserir} onChangeText={titulo => this.setState({ titulo })} />
+                        </View>
+                        <View style={styles.dados}>
+                            <Text>Descrição</Text>
+                            <TextInput style={styles.inserir} onChangeText={descricao => this.setState({ descricao })} />
+                        </View>
+                        <View style={styles.dados}>
+                            <Text>Tema</Text>
+                            <Picker
+                                selectedValue={this.state.idTema}
+                                onValueChange={(itemValue) => this.setState({ idTema: itemValue })}
+                                style={styles.inserir}
+                            >
+                                <Picker.Item value={0} label={'Selecione um valor'} key={0} />
+                                {
+                                    this.state.listaTemas.map((escopo) => {
+                                        return <Picker.Item value={escopo.idTema} label={escopo.tituloTema} key={escopo.idTema} />
+                                    })
+                                }
+                            </Picker>
+                        </View>
+                        <TouchableOpacity style={styles.btnCadastar} onPress={this.Cadastrar}>
+                            <Text style={styles.textoBtnCadastar}>Cadastrar</Text>
+                        </TouchableOpacity>
                     </View>
-                    <View style={styles.dados}>
-                        <Text>Tema</Text>
-
-
-                        <Picker
-                            selectedValue={this.state.idTema}
-                            onValueChange={(itemValue) => this.setState({ idTema: itemValue })}
-                        >
-                            <Picker.Item value={0} label={'Selecione um valor'} key={0} />
-                            {
-                                this.state.listaTemas.map((escopo) => {
-                                    return <Picker.Item value={escopo.idTema} label={escopo.tituloTema} key={escopo.idTema} />
-                                })
-                            }
-                        </Picker>
 
 
 
-                    </View>
-                    <TouchableOpacity style={styles.btnCadastar} onPress={this.Cadastrar}>
-                        <Text>Cadastrar</Text>
-                    </TouchableOpacity>
                 </View>
-
-                <bottomTab.Navigator
-                    initialRouteName='Home'
-
-                    screenOptions={({ route }) => ({
-                        tabBarIcon: () => {
-                            if (route.name === 'Home') {
-                                return (
-                                    <Image
-                                        source={require('../../Assets/IconsNavigation/home.png')}
-                                        style={styles.tabBarIcon}
-                                    />
-                                )
-                            }
-                            if (route.name === 'Escopos') {
-                                return (
-                                    <Image
-                                        source={require('../../Assets/IconsNavigation/escopos.png')}
-                                        style={styles.tabBarIcon}
-                                    />
-                                )
-                            }
-                        },
-
-                        headerShown: false,
-                        tabBarShowLabel: false,
-                        tabBarActiveBackgroundColor: '#EDB205',
-                        tabBarInactiveBackgroundColor: '#EDB205',
-                        tabBarActiveTintColor: 'red',
-                        tabBarInactiveTintColor: '#FFFFFF',
-                    })}
-                >
-                    <bottomTab.Screen name="Home" component={Home} />
-                    <bottomTab.Screen name="Escopos" component={Escopos} />
-
-                </bottomTab.Navigator>
-
-            </View>
+            
         );
     }
 
-    // renderItem = ({ item }) => (
-    //     // <Text style={{ fontSize: 20, color: 'red' }}>{item.nomeEvento}</Text>
-
-    //     <View style={styles.flatItemRow}>
-
-    //         <Text style={styles.flatItemTitle}>{item.tituloTema}</Text>
-
-    //     </View>
-    // );
 
 }
 
@@ -175,10 +135,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 400,
         width: '100%',
+        marginBottom: 150,
     },
 
     dados: {
-        backgroundColor: '#0F0',
+        // backgroundColor: '#0F0',
         width: 232,
         height: 60,
     },
@@ -196,11 +157,30 @@ const styles = StyleSheet.create({
         width: 194,
         height: 47,
         backfaceVisibility: "visible",
-        backgroundColor: '#F00',
+        backgroundColor: '#DB3D58',
         borderRadius: 22,
         alignItems: 'center',
         justifyContent: 'center',
+        fontSize: 30,
     },
+
+    textoBtnCadastar: {
+        fontSize: 22,
+        color: '#FFF',
+    },
+
+    titulo_pg: {
+        fontSize: 30,
+        color: '#4D0E02',
+        marginTop: 20,
+        width: 350,
+    },
+
+    container_geral: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: '100%',
+    }
 
 
 })

@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Cadastro from "../screens/cadastro"
 
 import {
     Colors,
@@ -62,7 +63,7 @@ export default class Home extends Component {
                     <Text style={styles.SectionTexto}>
                         Crie os seus escopos de projetos públicos
                     </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.props.navigation.navigate('Cadastrar_Escopo')}>
                         <Image source={require('../../Assets/IconsNavigation/cadastro.png')} style={styles.SectionImg} />
                     </TouchableOpacity>
                 </View>

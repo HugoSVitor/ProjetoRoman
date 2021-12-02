@@ -51,7 +51,7 @@ export default function Stack() {
       >
         <AuthStack.Screen name="Login" component={Login} />
         <AuthStack.Screen name="Main" component={Main} />
-        <AuthStack.Screen name="Cadastrar Escopo" component={Cadastro} />
+        <AuthStack.Screen name="Cadastrar_Escopo" component={Cadastro} />
       </AuthStack.Navigator>
     </NavigationContainer>
   )
