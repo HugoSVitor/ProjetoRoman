@@ -21,6 +21,17 @@ namespace Senai_Roman.webAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
+
             services
                .AddControllers()
                .AddNewtonsoftJson(options => {
@@ -77,6 +88,8 @@ namespace Senai_Roman.webAPI
             });
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 
