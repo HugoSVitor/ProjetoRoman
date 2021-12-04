@@ -4,7 +4,7 @@ import 'react-native-gesture-handler';
 
 import React from 'react';
 import { StatusBar } from 'react-native';
-import Cadastro from './src/screens/cadastro';
+
 
 // import {
 //   SafeAreaView,
@@ -43,15 +43,9 @@ export default function Stack() {
         backgroundColor="#EDB205"
       />
 
-      <AuthStack.Navigator
-        initialRouteName="Login"
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
+      <AuthStack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false, }}>
         <AuthStack.Screen name="Login" component={Login} />
         <AuthStack.Screen name="Main" component={Main} />
-        <AuthStack.Screen name="Cadastrar_Escopo" component={Cadastro} />
       </AuthStack.Navigator>
     </NavigationContainer>
   )

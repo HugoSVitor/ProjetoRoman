@@ -55,7 +55,7 @@ export default class Home extends Component {
                     <Text style={styles.SectionTexto}>
                         Veja as sugestões de escopos de projetos criados por outros professores
                     </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Escopos')}>
                         <Image source={require('../../Assets/IconsNavigation/escopos.png')} style={styles.SectionImg} />
                     </TouchableOpacity>
                 </View>
@@ -63,7 +63,7 @@ export default class Home extends Component {
                     <Text style={styles.SectionTexto}>
                         Crie os seus escopos de projetos públicos
                     </Text>
-                    <TouchableOpacity onPress={this.props.navigation.navigate('Cadastrar_Escopo')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Cadastrar_Escopo')}>
                         <Image source={require('../../Assets/IconsNavigation/cadastro.png')} style={styles.SectionImg} />
                     </TouchableOpacity>
                 </View>
